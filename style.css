@@ -1,14 +1,14 @@
 :root {
-  --bg: #1B1D21;
-  --surface: #232629;
-  --surface-alt: #1F2124;
-  --ink: #ECEDEF;
-  --ink-muted: #9CA1AA;
-  --border: #34373C;
-  --teal: #C1662C;
-  --teal-soft: rgba(193, 102, 44, 0.22);
-  --amber: #D99A4E;
-  --amber-soft: rgba(217, 154, 78, 0.2);
+  --bg: #1B1D21; /* Background */
+  --surface: #232629; /* Individual Card Backgrounds */
+  --surface-alt: #1F2124; 
+  --ink: #ECEDEF; /* Primary Text Color */
+  --ink-muted: #9CA1AA; /* Secondary Text Color */
+  --border: #34373C; /* Border Lines */
+  --accent: #C1662C; /* Orange Accent Color */
+  --accent-soft: rgba(193, 102, 44, 0.22); /* Softer Orange Accent Color */
+  --amber: #D99A4E; /* Secondary Accent (Light Goldish) */
+  --amber-soft: rgba(217, 154, 78, 0.2); /* Lighter Secondary Accent */
 
   --font-display: "Public Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
@@ -35,7 +35,7 @@ body {
 }
 
 a { color: inherit; text-decoration: none; }
-a:focus-visible, button:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .mono { font-family: var(--font-mono); letter-spacing: 0.02em; }
 
@@ -43,7 +43,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; letter-spacing:
 
 ul { padding-left: 1.1em; }
 li { margin-bottom: 6px; color: var(--ink-muted); }
-li::marker { color: var(--teal); }
+li::marker { color: var(--accent); }
 
 /* ---------- header ---------- */
 
@@ -97,7 +97,7 @@ li::marker { color: var(--teal); }
 }
 
 .btn-primary {
-  background: var(--teal);
+  background: var(--accent);
   color: #1B1D21;
 }
 .btn-primary:hover { background: #D67A3C; }
@@ -107,7 +107,7 @@ li::marker { color: var(--teal); }
   color: var(--ink);
   background: transparent;
 }
-.btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 
 .hero-actions {
   display: flex;
@@ -125,7 +125,7 @@ li::marker { color: var(--teal); }
   border-radius: 50%;
   flex-shrink: 0;
 }
-.dot-active { background: var(--teal); box-shadow: 0 0 0 3px var(--teal-soft); }
+.dot-active { background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
 .dot-warn { background: var(--amber); box-shadow: 0 0 0 3px var(--amber-soft); }
 .dot-inactive { background: var(--ink-muted); opacity: 0.5; }
 
@@ -150,7 +150,7 @@ li::marker { color: var(--teal); }
 .hero-role {
   font-size: 1.15rem;
   font-weight: 600;
-  color: var(--teal);
+  color: var(--accent);
   margin-bottom: 18px;
 }
 
@@ -173,7 +173,7 @@ li::marker { color: var(--teal); }
 
 .eyebrow {
   font-size: 0.75rem;
-  color: var(--teal);
+  color: var(--accent);
   text-transform: uppercase;
   margin-bottom: 8px;
 }
@@ -240,7 +240,7 @@ li::marker { color: var(--teal); }
 
 .timeline-content h3 { font-size: 1.15rem; margin-bottom: 2px; }
 
-.timeline-org { color: var(--teal); font-weight: 600; font-size: 0.9rem; margin-bottom: 12px; }
+.timeline-org { color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 12px; }
 
 .timeline-content ul { font-size: 0.92rem; }
 
@@ -304,7 +304,7 @@ li::marker { color: var(--teal); }
 .project-link {
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--teal);
+  color: var(--accent);
 }
 .project-link:hover { text-decoration: underline; }
 
