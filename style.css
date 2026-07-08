@@ -10,6 +10,13 @@
   --amber: #D99A4E; /* Secondary Accent (Light Goldish) */
   --amber-soft: rgba(217, 154, 78, 0.2); /* Lighter Secondary Accent */
 
+  --status-good: #5E9C6C; /* Status dots only — independent of --accent */
+  --status-good-soft: rgba(94, 156, 108, 0.22);
+  --status-progress: #D99A4E; /* Status dots only */
+  --status-progress-soft: rgba(217, 154, 78, 0.2);
+  --status-complete: #6E8CAE; /* Status dots only — 'finished', distinct from 'ongoing' */
+  --status-complete-soft: rgba(110, 140, 174, 0.22);
+
   --font-display: "Public Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 
@@ -125,9 +132,10 @@ li::marker { color: var(--accent); }
   border-radius: 50%;
   flex-shrink: 0;
 }
-.dot-accent { background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
-.dot-gold { background: var(--amber); box-shadow: 0 0 0 3px var(--amber-soft); }
-.dot-muted { background: var(--ink-muted); opacity: 0.5; }
+.dot-good { background: var(--status-good); box-shadow: 0 0 0 3px var(--status-good-soft); }
+.dot-progress { background: var(--status-progress); box-shadow: 0 0 0 3px var(--status-progress-soft); }
+.dot-complete { background: var(--status-complete); box-shadow: 0 0 0 3px var(--status-complete-soft); }
+.dot-idle { background: var(--ink-muted); opacity: 0.5; }
 
 .status-line {
   display: flex;
