@@ -1,13 +1,14 @@
 :root {
-  --bg: #F5F6F8;
-  --surface: #FFFFFF;
-  --ink: #131A24;
-  --ink-muted: #5B6472;
-  --border: #E2E5EA;
-  --teal: #0F766E;
-  --teal-soft: #E4F2F0;
-  --amber: #B45309;
-  --amber-soft: #FBEEE0;
+  --bg: #1B1D21;
+  --surface: #232629;
+  --surface-alt: #1F2124;
+  --ink: #ECEDEF;
+  --ink-muted: #9CA1AA;
+  --border: #34373C;
+  --teal: #C1662C;
+  --teal-soft: rgba(193, 102, 44, 0.22);
+  --amber: #D99A4E;
+  --amber-soft: rgba(217, 154, 78, 0.2);
 
   --font-display: "Public Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
@@ -50,7 +51,7 @@ li::marker { color: var(--teal); }
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(245, 246, 248, 0.9);
+  background: rgba(27, 29, 33, 0.85);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
 }
@@ -96,10 +97,10 @@ li::marker { color: var(--teal); }
 }
 
 .btn-primary {
-  background: var(--ink);
-  color: var(--surface);
+  background: var(--teal);
+  color: #1B1D21;
 }
-.btn-primary:hover { background: var(--teal); }
+.btn-primary:hover { background: #D67A3C; }
 
 .btn-ghost {
   border-color: var(--border);
@@ -168,7 +169,7 @@ li::marker { color: var(--teal); }
 /* ---------- sections ---------- */
 
 .section { padding: 64px 0; }
-.section.alt { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.section.alt { background: var(--surface-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
 .eyebrow {
   font-size: 0.75rem;
