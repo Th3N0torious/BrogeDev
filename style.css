@@ -299,6 +299,8 @@ li::marker { color: var(--teal); }
 
 .project-stack { color: var(--ink) !important; font-size: 0.78rem !important; margin-bottom: 14px !important; }
 
+.project-links { display: flex; gap: 18px; }
+
 .project-link {
   font-size: 0.88rem;
   font-weight: 600;
