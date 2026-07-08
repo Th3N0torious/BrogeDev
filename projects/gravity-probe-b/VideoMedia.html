@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos - Gravity Probe B</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+<div class="space-background"></div>
+
+<section class="videos">
+  <h1>Informational Videos</h1>
+  <p>Learn more about Gravity Probe B through these videos.</p>
+
+  <!-- Video Grid -->
+  <div class="video-grid">
+    <!-- Video 1 -->
+    <div class="video-item">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/noOkWegmVx4?si=2otWYPXOSElLK4Iy" 
+              title="Gravity Probe B in a Nutshell" frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <p><strong>Gravity Probe B in a Nutshell</strong></p>
+      <p>A 14-minute presentation describing all major aspects—including final results—of this landmark experiment and its extraordinary technologies.</p>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="video-item">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/qkXyO62nVOs?si=rVDuHYaC2LCIjVI4" 
+              title="Gravity Probe B Overview" frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <p><strong>Gravity Probe B</strong></p>
+      <p>This video explains the design challenges overcome for the Gravity Probe B spacecraft to use near-perfect gyroscopes in space.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>2024 John Broge | Astronomy Class Project</p>
+</footer>
+
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+    });
+</script>
+ 
+<script src="stars.js"></script>
+  
+</body>
+</html>

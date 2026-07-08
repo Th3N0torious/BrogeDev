@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gravity Probe B</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+<div class="space-background"></div>
+
+  <!-- Hero Section -->
+<section class="hero">
+  <img src="einstein-in-gyro.jpg" alt="Einstein's image inverted in an uncoated gyro rotor" class="hero-image">
+  <h1>Gravity Probe B</h1>
+  <p>A revolutionary experiment testing Einstein's theory of relativity, directly measuring the subtle warping and 
+  twisting of space-time caused by Earth's mass and rotation. 
+  <br>
+  This mission provided unprecedented confirmation of 
+  how gravity shapes the universe around us. 
+  </p>
+  <a href="gravity_probe_b.html">
+    <button class="cta-button">Learn More</button>
+  </a>
+</section>
+  
+<footer>
+<p>2024 John Broge | Astronomy Class Project</p>
+</footer>
+
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
+  <script src="stars.js"></script>
+  
+</body>
+</html>

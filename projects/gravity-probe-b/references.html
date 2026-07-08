@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>References</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="space-background"></div>
+    <div id="header-placeholder"></div>
+
+    <section class="section" style="background-color: #162447; border-radius: 8px; padding: 20px; margin: 20px;">
+        <h1>References</h1>
+        
+        <ul>
+            <li>Stanford University. (n.d.). Gravity Probe B site. Retrieved from 
+                <a href="https://einstein.stanford.edu/index.html">https://einstein.stanford.edu/index.html</a>
+            </li>
+
+            <li>Thorne, K. S. (1988). Gravitomagnetism, jets in quasars, and the Stanford gyroscope experiment. In J. D. Fairbank, B. S. DeiIVW, Jr., C. W. F. Everitt, & P. F. Michelson (Eds.), <em>Near zero: New frontiers of physics</em> (Chapter VI.2). Retrieved from 
+                <a href="https://einstein.stanford.edu/content/sci_papers/papers/nz-Thorne_101.pdf">https://einstein.stanford.edu/content/sci_papers/papers/nz-Thorne_101.pdf</a>
+            </li>
+
+            <li>Murphy, T. W., & Nordtvedt, K. (2011). Finally, results from Gravity Probe B. <em>Physics</em>, 4, 43. Retrieved from 
+                <a href="https://physics.aps.org/articles/v4/43">https://physics.aps.org/articles/v4/43</a>
+            </li>
+
+            <li>Gravity Probe B. (n.d.). In Wikipedia. Retrieved from 
+                <a href="https://en.wikipedia.org/wiki/Gravity_Probe_B">https://en.wikipedia.org/wiki/Gravity_Probe_B</a>
+            </li>
+
+            <li>Reflective Layer. (2024). <em>Gravity Probe B</em> [Video]. YouTube. Retrieved from 
+                <a href="https://www.youtube.com/watch?v=qkXyO62nVOs">https://www.youtube.com/watch?v=qkXyO62nVOs</a>
+            </li>
+
+            <li>Relgyro. (2011, July 10). Gravity Probe B in a Nutshell — The Video [Video]. YouTube.
+                <a href="https://www.youtube.com/watch?v=noOkWegmVx4">https://www.youtube.com/watch?v=noOkWegmVx4</a>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>2024 John Broge | Astronomy Class Project</p>
+    </footer>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+    <script src="stars.js"></script>
+</body>
+</html>
