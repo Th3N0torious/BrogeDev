@@ -267,16 +267,39 @@
   </div>
 </footer>
 
-<div class="edge-smoke edge-smoke-left" aria-hidden="true"></div>
-<div class="edge-smoke edge-smoke-right" aria-hidden="true"></div>
+<div class="smoke-container smoke-left" id="smoke-left" aria-hidden="true"></div>
+<div class="smoke-container smoke-right" id="smoke-right" aria-hidden="true"></div>
 <script>
-  let scrollTimeout;
+  const smokeLeft = document.getElementById('smoke-left');
+  const smokeRight = document.getElementById('smoke-right');
+
+  function spawnPuff(container, isRight) {
+    const puff = document.createElement('div');
+    puff.classList.add('smoke-puff');
+
+    const size = 70 + Math.random() * 70;
+    const startY = Math.random() * 100;
+    const drift = (isRight ? -1 : 1) * (10 + Math.random() * 25);
+    const duration = 3.5 + Math.random() * 2.5;
+
+    puff.style.width = `${size}px`;
+    puff.style.height = `${size}px`;
+    puff.style.top = `${startY}%`;
+    puff.style.setProperty('--drift', `${drift}px`);
+    puff.style.animationDuration = `${duration}s`;
+
+    container.appendChild(puff);
+    puff.addEventListener('animationend', () => puff.remove());
+  }
+
+  let lastSpawn = 0;
   window.addEventListener('scroll', () => {
-    document.body.classList.add('is-scrolling');
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(() => {
-      document.body.classList.remove('is-scrolling');
-    }, 150);
+    const now = Date.now();
+    if (now - lastSpawn > 180) {
+      spawnPuff(smokeLeft, false);
+      spawnPuff(smokeRight, true);
+      lastSpawn = now;
+    }
   });
 </script>
   
