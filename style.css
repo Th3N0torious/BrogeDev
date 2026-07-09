@@ -394,16 +394,29 @@ li::marker { color: var(--accent); }
   position: absolute;
   inset: 0;
   will-change: transform;
-  background-repeat: repeat-y;
+  overflow: hidden;
 }
 
-.mist-left .mist-layer {
+.mist-layer-inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -30px;
+  right: -30px;
+  background-repeat: repeat-y;
+}
+.mist-left .mist-layer-inner {
   background-image: radial-gradient(ellipse 200px 260px at 0% 50%, rgba(154, 161, 170, 0.4), transparent 70%);
 }
-.mist-right .mist-layer {
+.mist-right .mist-layer-inner {
   background-image: radial-gradient(ellipse 200px 260px at 100% 50%, rgba(154, 161, 170, 0.4), transparent 70%);
 }
 
-.mist-layer-1 { background-size: 100% 260px; filter: blur(20px); opacity: 0.3; }
-.mist-layer-2 { background-size: 100% 340px; filter: blur(30px); opacity: 0.45; }
-.mist-layer-3 { background-size: 100% 420px; filter: blur(42px); opacity: 0.6; }
+.mist-layer-1 .mist-layer-inner { background-size: 100% 260px; filter: blur(20px); opacity: 0.3; animation: mist-idle 14s ease-in-out infinite; }
+.mist-layer-2 .mist-layer-inner { background-size: 100% 340px; filter: blur(30px); opacity: 0.45; animation: mist-idle 10s ease-in-out infinite reverse; }
+.mist-layer-3 .mist-layer-inner { background-size: 100% 420px; filter: blur(42px); opacity: 0.6; animation: mist-idle 7s ease-in-out infinite; }
+
+@keyframes mist-idle {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(15px) translateY(-20px); }
+}
