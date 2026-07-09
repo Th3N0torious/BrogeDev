@@ -135,7 +135,7 @@ li::marker { color: var(--accent); }
 .dot-good { background: var(--status-good); color: var(--status-good); box-shadow: 0 0 0 3px var(--status-good-soft); animation: pulse-glow 2s ease-in-out infinite; }
 .dot-progress { background: var(--status-progress); color: var(--status-progress); box-shadow: 0 0 0 3px var(--status-progress-soft); animation: pulse-glow 2s ease-in-out infinite; }
 .dot-complete { background: var(--status-complete); color: var(--status-complete); box-shadow: 0 0 0 3px var(--status-complete-soft); animation: pulse-glow 2s ease-in-out infinite; }
-.dot-idle { background: var(--ink-muted); opacity: 0.5; color: var(--ink-muted); box-shadow: 0 0 0 3px var(--ink-muted); animation: pulse-glow 2s ease-in-out infinite; }
+.dot-idle { background: var(--ink-muted); color: var(--ink-muted); box-shadow: 0 0 0 3px var(--ink-muted); animation: pulse-glow 2s ease-in-out infinite; }
 @keyframes pulse-glow {
   0%, 100% {
     box-shadow: 0 0 4px 1px currentColor;
