@@ -300,6 +300,12 @@ li::marker { color: var(--accent); }
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
 .project-status {
