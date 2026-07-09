@@ -375,3 +375,34 @@ li::marker { color: var(--accent); }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* ---------- edge smoke ---------- */
+
+.edge-smoke {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 220px;
+  pointer-events: none;
+  z-index: 5;
+  filter: blur(40px);
+  transition: opacity 0.4s ease, filter 0.4s ease;
+  animation: smoke-breathe 6s ease-in-out infinite;
+}
+.edge-smoke-left {
+  left: 0;
+  background: radial-gradient(ellipse at left center, rgba(0,0,0,0.6), transparent 70%);
+}
+.edge-smoke-right {
+  right: 0;
+  background: radial-gradient(ellipse at right center, rgba(0,0,0,0.6), transparent 70%);
+}
+@keyframes smoke-breathe {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.5; }
+}
+body.is-scrolling .edge-smoke {
+  opacity: 0.85;
+  filter: blur(55px);
+}
+
