@@ -132,10 +132,19 @@ li::marker { color: var(--accent); }
   border-radius: 50%;
   flex-shrink: 0;
 }
-.dot-good { background: var(--status-good); box-shadow: 0 0 0 3px var(--status-good-soft); }
-.dot-progress { background: var(--status-progress); box-shadow: 0 0 0 3px var(--status-progress-soft); }
-.dot-complete { background: var(--status-complete); box-shadow: 0 0 0 3px var(--status-complete-soft); }
+.dot-good { background: var(--status-good); color: var(--status-good); box-shadow: 0 0 0 3px var(--status-good-soft); animation: pulse-glow 2s ease-in-out infinite; }
+.dot-progress { background: var(--status-progress); color: var(--status-progress); box-shadow: 0 0 0 3px var(--status-progress-soft); animation: pulse-glow 2s ease-in-out infinite; }
+.dot-complete { background: var(--status-complete); color: var(--status-complete); box-shadow: 0 0 0 3px var(--status-complete-soft); animation: pulse-glow 2s ease-in-out infinite; }
 .dot-idle { background: var(--ink-muted); opacity: 0.5; }
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 4px 1px currentColor;
+  }
+  50% {
+    box-shadow: 0 0 12px 4px currentColor;
+  }
+}
 
 .status-line {
   display: flex;
