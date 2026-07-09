@@ -218,6 +218,12 @@ li::marker { color: var(--accent); }
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.credential-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(193, 102, 44, 0.35);
 }
 
 .credential-card .dot { margin-top: 6px; }
@@ -285,6 +291,14 @@ li::marker { color: var(--accent); }
   padding: 6px 12px;
   font-size: 0.82rem;
   color: var(--ink);
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.chip:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  background: var(--surface);
+  box-shadow: 0 4px 10px rgba(193, 102, 44, 0.3);
 }
 
 /* ---------- projects ---------- */
@@ -305,7 +319,7 @@ li::marker { color: var(--accent); }
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 12px 28px rgba(193, 102, 44, 0.35);
 }
 
 .project-status {
