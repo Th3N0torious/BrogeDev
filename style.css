@@ -394,7 +394,7 @@ li::marker { color: var(--accent); }
   position: absolute;
   left: -50px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(10, 11, 13, 0.55) 0%, rgba(10, 11, 13, 0) 70%);
+  background: radial-gradient(circle, rgba(154, 161, 170, 0.35) 0%, rgba(154, 161, 170, 0) 70%);
   filter: blur(14px);
   animation: smoke-drift ease-out forwards;
 }
