@@ -278,22 +278,5 @@
   <div class="mist-layer mist-layer-3"><div class="mist-layer-inner"></div></div>
 </div>
   
-<script>
-  const mistContainers = [document.getElementById('mist-left'), document.getElementById('mist-right')];
-  const layerSpeeds = [0.1, 0.25, 0.45]; // slow, medium, fast = far, mid, near
-
-  function updateMist() {
-    const y = window.scrollY;
-    mistContainers.forEach(container => {
-      const layers = container.querySelectorAll('.mist-layer');
-      layers.forEach((layer, i) => {
-        layer.style.transform = `translateY(${-y * layerSpeeds[i]}px)`;
-      });
-    });
-    requestAnimationFrame(updateMist);
-  }
-  requestAnimationFrame(updateMist);
-</script>
-  
 </body>
 </html>
