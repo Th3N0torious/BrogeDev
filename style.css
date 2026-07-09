@@ -136,12 +136,13 @@ li::marker { color: var(--accent); }
 .dot-progress { background: var(--status-progress); color: var(--status-progress); box-shadow: 0 0 0 3px var(--status-progress-soft); animation: pulse-glow 2s ease-in-out infinite; }
 .dot-complete { background: var(--status-complete); color: var(--status-complete); box-shadow: 0 0 0 3px var(--status-complete-soft); animation: pulse-glow 2s ease-in-out infinite; }
 .dot-idle { background: var(--ink-muted); color: var(--ink-muted); box-shadow: 0 0 0 3px var(--ink-muted); animation: pulse-glow 2s ease-in-out infinite; }
+
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 4px 1px currentColor;
+    box-shadow: 0 0 2px 1px currentColor;
   }
   50% {
-    box-shadow: 0 0 12px 4px currentColor;
+    box-shadow: 0 0 6px 2px currentColor;
   }
 }
 
