@@ -267,40 +267,31 @@
   </div>
 </footer>
 
-<div class="smoke-container smoke-left" id="smoke-left" aria-hidden="true"></div>
-<div class="smoke-container smoke-right" id="smoke-right" aria-hidden="true"></div>
+<div class="mist mist-left" id="mist-left">
+  <div class="mist-layer mist-layer-1"></div>
+  <div class="mist-layer mist-layer-2"></div>
+  <div class="mist-layer mist-layer-3"></div>
+</div>
+<div class="mist mist-right" id="mist-right">
+  <div class="mist-layer mist-layer-1"></div>
+  <div class="mist-layer mist-layer-2"></div>
+  <div class="mist-layer mist-layer-3"></div>
+</div>
 <script>
-  const smokeLeft = document.getElementById('smoke-left');
-  const smokeRight = document.getElementById('smoke-right');
+  const mistContainers = [document.getElementById('mist-left'), document.getElementById('mist-right')];
+  const layerSpeeds = [0.1, 0.25, 0.45]; // slow, medium, fast = far, mid, near
 
-  function spawnPuff(container, isRight) {
-    const puff = document.createElement('div');
-    puff.classList.add('smoke-puff');
-
-    const size = 70 + Math.random() * 70;
-    const startY = Math.random() * 100;
-    const drift = (isRight ? -1 : 1) * (10 + Math.random() * 25);
-    const duration = 3.5 + Math.random() * 2.5;
-
-    puff.style.width = `${size}px`;
-    puff.style.height = `${size}px`;
-    puff.style.top = `${startY}%`;
-    puff.style.setProperty('--drift', `${drift}px`);
-    puff.style.animationDuration = `${duration}s`;
-
-    container.appendChild(puff);
-    puff.addEventListener('animationend', () => puff.remove());
+  function updateMist() {
+    const y = window.scrollY;
+    mistContainers.forEach(container => {
+      const layers = container.querySelectorAll('.mist-layer');
+      layers.forEach((layer, i) => {
+        layer.style.transform = `translateY(${-y * layerSpeeds[i]}px)`;
+      });
+    });
+    requestAnimationFrame(updateMist);
   }
-
-  let lastSpawn = 0;
-  window.addEventListener('scroll', () => {
-    const now = Date.now();
-    if (now - lastSpawn > 180) {
-      spawnPuff(smokeLeft, false);
-      spawnPuff(smokeRight, true);
-      lastSpawn = now;
-    }
-  });
+  requestAnimationFrame(updateMist);
 </script>
   
 </body>
