@@ -267,5 +267,18 @@
   </div>
 </footer>
 
+<div class="edge-smoke edge-smoke-left" aria-hidden="true"></div>
+<div class="edge-smoke edge-smoke-right" aria-hidden="true"></div>
+<script>
+  let scrollTimeout;
+  window.addEventListener('scroll', () => {
+    document.body.classList.add('is-scrolling');
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      document.body.classList.remove('is-scrolling');
+    }, 150);
+  });
+</script>
+  
 </body>
 </html>
