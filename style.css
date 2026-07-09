@@ -223,7 +223,7 @@ li::marker { color: var(--accent); }
 
 .credential-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(193, 102, 44, 0.35);
+  box-shadow: 0 12px 20px rgba(193, 102, 44, 0.15);
 }
 
 .credential-card .dot { margin-top: 6px; }
@@ -319,7 +319,7 @@ li::marker { color: var(--accent); }
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(193, 102, 44, 0.35);
+  box-shadow: 0 12px 20px rgba(193, 102, 44, 0.15);
 }
 
 .project-status {
